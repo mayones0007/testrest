@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://admin:1234@localhost:5432/foodie?schema=public"
+}
+
+model dishes {
+  id          Int    @id(map: "untitled_table_185_pkey") @default(autoincrement())
+  name        String @default("df")
+  region      String @default("fgfg")
+  tag         String @default("fgf")
+  description String @default("fff.jpg")
+  price       String
+}
